@@ -31,7 +31,7 @@
   // this script never ran here at all, which is the very first thing to
   // rule out before touching selectors.
   window.__LMT__ = {
-    version: '0.5.1',
+    version: '0.5.2',
     loadedAt: new Date().toISOString(),
     url: location.href,
     inIframe: window.top !== window,
@@ -665,13 +665,13 @@
     const bodyTextarea = document.createElement('textarea');
     bodyTextarea.className = 'lmt-sidebar-form-textarea';
     bodyTextarea.rows = 7;
-    bodyTextarea.placeholder = 'Hi {{firstName}}, thanks for connecting...';
+    bodyTextarea.placeholder = 'Hi {{first_name}}, thanks for connecting...';
     bodyTextarea.value = editing ? editing.body : '';
     bodyLabel.appendChild(bodyTextarea);
 
     const callout = document.createElement('div');
     callout.className = 'lmt-sb-callout';
-    callout.innerHTML = '<span class="lmt-sb-callout-badge">i</span><p>You can use variables like <strong>{{firstName}}</strong>, <strong>{{companyName}}</strong> etc.</p>';
+    callout.innerHTML = '<span class="lmt-sb-callout-badge">i</span><p>You can use variables like <strong>{{first_name}}</strong>, <strong>{{company_name}}</strong> etc.</p>';
 
     const footer = document.createElement('div');
     footer.className = 'lmt-sb-footer';
@@ -755,7 +755,7 @@
             <rect x="6.5" y="12.2" width="8" height="1.6" rx="0.8" fill="#056F50"/>
           </svg>
         </span>
-        <span class="lmt-sb-brand-name">LI Templates</span>
+        <span class="lmt-sb-brand-name">QwikStack</span>
       </div>
     `;
     const closeBtn = document.createElement('button');

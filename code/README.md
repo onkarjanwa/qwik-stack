@@ -1,7 +1,7 @@
 # LinkedIn Message Templates — Phase 1 (MVP)
 
 A Chrome extension: save short reply templates and insert one into a LinkedIn
-chat message in one click, with `{{firstName}}` auto-filled from the
+chat message in one click, with `{{first_name}}` auto-filled from the
 recipient's name. See `../docs` (or the project's `spec.md` / `todo.md`) for
 the full spec and roadmap.
 
@@ -27,7 +27,7 @@ compose box's own toolbar (emoji/attachment icons), on the message box
 itself:
 1. Go to `linkedin.com/messaging`, open any conversation.
 2. Click the icon in that box's toolbar.
-3. Pick a template — it's inserted into that box, with `{{firstName}}`
+3. Pick a template — it's inserted into that box, with `{{first_name}}`
    replaced by the recipient's first name where LinkedIn's page lets us
    read it. Edit as needed, then send normally (the extension never sends
    anything itself).
@@ -50,7 +50,7 @@ Before relying on this day-to-day, run through:
 
 - [ ] Insert icon appears in a **1:1 chat** compose toolbar
 - [ ] Insert icon appears in a **group chat** compose toolbar (and
-      `{{firstName}}` correctly falls back to "there" rather than picking a
+      `{{first_name}}` correctly falls back to "there" rather than picking a
       random member)
 - [ ] Insert icon appears when opening a **brand-new conversation** (not
       just an existing thread)
@@ -82,7 +82,7 @@ all (reload the extension and open a fresh tab, per the note above).
 
 ## What's intentionally not here yet
 
-Categories/folders, search, more placeholders (`{{lastName}}`, `{{companyName}}`,
+Categories/folders, search, more placeholders (`{{lastName}}`, `{{company_name}}`,
 etc.), keyboard shortcuts / `/` trigger, and import/export are planned for
 Phase 2 — see `spec.md`. The Phase 1 data model already reserves a `folderId`
 field and the placeholder resolver is already a small registry, specifically

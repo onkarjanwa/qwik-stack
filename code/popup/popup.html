@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Message Templates</title>
+  <title>QwikStack</title>
   <link rel="stylesheet" href="popup.css" />
 </head>
 <body>
@@ -15,7 +15,7 @@
       </svg>
     </div>
     <div class="header-text">
-      <h1>Templates</h1>
+      <h1>QwikStack</h1>
       <p>Quick replies for LinkedIn chat</p>
     </div>
   </header>
@@ -36,8 +36,8 @@
         <input id="title-input" type="text" maxlength="80" placeholder="e.g. Intro follow-up" required />
 
         <label class="field-label" for="body-input">Message</label>
-        <textarea id="body-input" rows="6" placeholder="Hi {{firstName}}, thanks for connecting!" required></textarea>
-        <p class="hint">Use <code>{{firstName}}</code> to auto-insert the recipient's first name.</p>
+        <textarea id="body-input" rows="6" placeholder="Hi {{first_name}}, thanks for connecting!" required></textarea>
+        <p class="hint">Use <code>{{first_name}}</code> to auto-insert the recipient's first name.</p>
 
         <div class="form-actions">
           <button type="button" id="cancel-btn" class="btn btn-secondary">Cancel</button>

@@ -1,6 +1,6 @@
 // lib/placeholders.js
-// Small placeholder-resolver registry. v1 only ships {{firstName}}, but the
-// registry shape is built so Phase 2 (lastName, fullName, companyName, etc.)
+// Small placeholder-resolver registry. v1 only ships {{first_name}}, but the
+// registry shape is built so Phase 2 (last_name, full_name, company_name, etc.)
 // is additive — just more entries in RESOLVERS, no rewrite.
 // Exposes a single global: TemplatePlaceholders
 
@@ -8,11 +8,11 @@
   // Each resolver receives a `ctx` object and returns a string, or null/undefined
   // if it can't resolve (the token is then left as a safe generic fallback).
   const RESOLVERS = {
-    firstName: (ctx) => ctx.recipientFirstName || null,
+    first_name: (ctx) => ctx.recipientFirstName || null,
   };
 
   const FALLBACKS = {
-    firstName: 'there',
+    first_name: 'there',
   };
 
   const TOKEN_RE = /\{\{\s*([a-zA-Z0-9_]+)\s*\}\}/g;

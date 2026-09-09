@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "LinkedIn Message Templates",
-  "version": "0.5.1",
+  "name": "QwikStack",
+  "version": "0.5.2",
   "description": "Insert message templates in LinkedIn chat, and manage them from a docked sidebar.",
   "permissions": [
     "storage"
@@ -10,7 +10,7 @@
     "https://*.linkedin.com/*"
   ],
   "action": {
-    "default_title": "LinkedIn Message Templates",
+    "default_title": "QwikStack",
     "default_icon": {
       "16": "icons/icon16.png",
       "48": "icons/icon48.png",
