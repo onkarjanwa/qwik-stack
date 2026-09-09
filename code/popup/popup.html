@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Message Templates</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-icon">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="3" y="5" width="18" height="14" rx="3" fill="white" fill-opacity="0.95"/>
+        <rect x="6.5" y="9" width="11" height="1.6" rx="0.8" fill="#6C5DF6"/>
+        <rect x="6.5" y="12.2" width="8" height="1.6" rx="0.8" fill="#6C5DF6"/>
+      </svg>
+    </div>
+    <div class="header-text">
+      <h1>Templates</h1>
+      <p>Quick replies for LinkedIn chat</p>
+    </div>
+  </header>
+
+  <main id="app">
+    <section id="list-view">
+      <div id="empty-state" class="empty-state" hidden>
+        <p class="empty-title">No templates yet</p>
+        <p class="empty-sub">Add your first one below and it'll show up in the picker inside LinkedIn chat.</p>
+      </div>
+      <ul id="template-list" class="template-list"></ul>
+      <button id="add-btn" class="btn btn-primary btn-block">+ New template</button>
+    </section>
+
+    <section id="edit-view" hidden>
+      <form id="template-form">
+        <label class="field-label" for="title-input">Title</label>
+        <input id="title-input" type="text" maxlength="80" placeholder="e.g. Intro follow-up" required />
+
+        <label class="field-label" for="body-input">Message</label>
+        <textarea id="body-input" rows="6" placeholder="Hi {{firstName}}, thanks for connecting!" required></textarea>
+        <p class="hint">Use <code>{{firstName}}</code> to auto-insert the recipient's first name.</p>
+
+        <div class="form-actions">
+          <button type="button" id="cancel-btn" class="btn btn-secondary">Cancel</button>
+          <button type="submit" id="save-btn" class="btn btn-primary">Save</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="../lib/storage.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
